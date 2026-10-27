@@ -79,4 +79,6 @@ Token* lexer_new_line_token(Lexer* lexer);
 
 int isbinary(int c);
 
+char* lexer_get_substring(Lexer* lexer, int start, int end);
+
 #endif // _LEXER_H
