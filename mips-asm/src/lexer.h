@@ -49,8 +49,8 @@ char* token_to_str(Token* token);
 typedef struct {
     const char* src;
     size_t src_size;
-    char c; // current character
-    unsigned int i; 
+    char current_char;
+    unsigned int current_index; 
 } Lexer;
 
 Lexer* init_lexer(const char* src);
