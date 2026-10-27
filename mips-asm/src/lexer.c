@@ -165,8 +165,8 @@ Token* lexer_register_token(Lexer* lexer, int type) {
 }
 
 Token* lexer_string_token(Lexer* lexer, int type) {
-    int start = lexer->current_index;
     lexer_next(lexer);
+    int start = lexer->current_index;
 
     while (lexer->current_char != '"') {
         lexer_next(lexer);
