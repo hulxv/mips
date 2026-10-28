@@ -77,7 +77,6 @@ Token* lexer_parse_id(Lexer* lexer) {
 
 Token* lexer_parse_number(Lexer* lexer) {
     int start = lexer->current_index;
-    lexer_next(lexer);
 
     int (*func)(int) = isdigit;
 
@@ -89,6 +88,8 @@ Token* lexer_parse_number(Lexer* lexer) {
 
             lexer_next(lexer);
         } else if (lexer->current_char == 'b') {
+            func = isbinary;
+
             lexer_next(lexer);
         }
     } else if (lexer->current_char == '-') {
