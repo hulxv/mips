@@ -10,5 +10,9 @@ set(MIPS_SOURCES
 	src/codegen.h
 	src/parser.c
 	src/parser.h
+	src/token.c
+	src/token.h
+	src/helper.c
+	src/helper.h
 )
 add_executable(mips-asm ${MIPS_SOURCES})
